@@ -22,7 +22,7 @@ int main()
     client_socket = socket(AF_INET, SOCK_STREAM, 0);
     client_addr.sin_family = AF_INET;
     client_addr.sin_port = htons(9001);
-    client_addr.sin_addr.s_addr = inet_addr("192.168.11.128");
+    client_addr.sin_addr.s_addr = inet_addr("ip");
 
     connect(client_socket, (SOCKADDR*) &client_addr, sizeof(client_addr)); // connect to target server
     recv(client_socket, recvData, sizeof(recvData), 0); // receive data from server
