@@ -14,8 +14,8 @@ int main()
 	server_socket = socket(AF_INET, SOCK_STREAM, 0); // TCP socket creation
 	
 	server_addr.sin_family = AF_INET; // declare the type
-	server_addr.sin_port = htons(9001); // listener port number
-	server_addr.sin_addr.s_addr = inet_addr("ip"); // listener ip
+	server_addr.sin_port = htons(9001); // CHANGE THIS listener port number
+	server_addr.sin_addr.s_addr = inet_addr("ip"); // CHANGE THIS listener ip
 	
 	bind(server_socket, (struct server_addr*) &server_addr, sizeof(server_addr)); //bind server
 	listen(server_socket, 5);
